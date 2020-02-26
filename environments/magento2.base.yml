@@ -35,7 +35,8 @@ services:
 
   php-fpm:
     hostname: "${WARDEN_ENV_NAME}-php-fpm"
-    image: quay.io/warden/php-fpm:${PHP_VERSION:-7.3}-magento2
+    # image: quay.io/warden/php-fpm:${PHP_VERSION:-7.3}-magento2
+    image: php-fpm-local
     environment:
       - TRAEFIK_DOMAIN
       - TRAEFIK_SUBDOMAIN
